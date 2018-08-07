@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FlexBox Nav</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+
+	<h1>Register for our Event</h1>
+	<h2>Please sign up for a food item or beverage to bring to the event.</h2>
+    <form id="registration">
+		<div class="userInput">
+			<ul>
+				<li>
+					<input type="text" name="fullname" placeholder="Full Name" required>
+					<input type="text" name="item" placeholder="Food Item/Beverage" required>
+					<input type="submit" id="submit" name="submit">
+				</li>
+			</ul>
+		</div>
+		<div class="output">
+		</div>
+	</form>
+
+  </div>
+
+</body>
+<script type="text/javascript">
+	var val = 1;
+	
+	$("#registration").submit(function(){
+		/* Get user input values */
+		var fullname = $('ul li input:nth-child(1)').val();
+		var item = $('ul li input:nth-child(2)').val();
+		
+		/* Clear values from input fields */
+		$('.userInput ul li input').val("");
+		$('.userInput ul li input').last().val("Submit");
+		
+		/* Create New List */
+		if (val == 1) {
+			$('.output').append('<ul></ul>');
+		}
+		
+		val = val + 1;
+		
+		/* Append user input values to list */
+		$('.output ul').append('<li></li>');
+		$('.output ul li').last().append('<p>' + fullname + ', ' + item + '</p>');
+		
+		return false;
+	});
+</script>
+</html>

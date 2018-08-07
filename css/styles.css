@@ -1,0 +1,120 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+/* Color pallette:
+  dark-teal:    #2b616d;
+  arctic:       #b2dbd5;
+  white-cloud:  #ffffff;
+  brick:        #fa8d62;
+*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	background: #ffffff;
+	color:#2b616d;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.25;
+	margin: 0 auto;
+	text-align: center;
+	width: 75%;
+}
+
+a {
+  color: #fa8d62;
+  text-decoration: none;
+}
+
+a:hover {
+	color: #b2dbd5;
+}
+
+header {
+	background-color:#b2dbd5;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0 auto;
+}
+
+h2 {
+	color: #fa8d62;
+	font-size: 1em;
+	margin-top: 0;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  font-size: .95em;
+  margin-bottom: 1.8em;
+}
+
+/* ================================= 
+ Form Element and Layout Styles
+==================================== */
+
+form {
+	margin: 0 auto;
+}
+
+/* ---------------
+    Input fields
+  ---------------- */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 52px;
+  margin: 0;
+  outline: 0;
+  padding: 18px;
+  background-color: #e8eeef;
+  color: #2b616d;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  -webkit-transition: all .4s ease-out;
+  -moz-transition: all .4s ease-out;
+  -ms-transition: all .4s ease-out;
+  -o-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+input::placeholder {
+  color: #bbbcbc;
+}
+
+input[placeholder*="Required"] {
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
+}
+
+input:focus {
+  border: 2px solid #2b616d;
+  background-color: #f8f9f9;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.userInput {
+	margin: 10px auto;
+}

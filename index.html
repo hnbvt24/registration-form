@@ -5,29 +5,29 @@
   <title>FlexBox Nav</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Bevan|Open+Sans" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="wrapper">
+    <div class="wrapper">
 
-	<h1>Register for our Event</h1>
-	<h2>Please sign up for a food item or beverage to bring to the event.</h2>
-    <form id="registration">
-		<div class="userInput">
-			<ul>
-				<li>
-					<input type="text" name="fullname" placeholder="Full Name" required>
-					<input type="text" name="item" placeholder="Food Item/Beverage" required>
-					<input type="submit" id="submit" name="submit">
-				</li>
-			</ul>
-		</div>
-		<div class="output">
-		</div>
-	</form>
+		<h1>Register for our Event</h1>
+		<h2>Please sign up for a food item or beverage to bring to the event.</h2>
+		<form id="registration">
+			<div class="userInput">
+				<ul>
+					<li>
+						<input type="text" name="fullname" placeholder="Full Name" maxlength="250" required>
+						<input type="text" name="item" placeholder="Food Item/Beverage" maxlength="250" required>
+						<input type="submit" id="submit" name="submit">
+					</li>
+				</ul>
+			</div>
+		</form>
 
-  </div>
-
+    </div>
+	<div class="output">
+	</div>
 </body>
 <script type="text/javascript">
 	var val = 1;
@@ -46,12 +46,11 @@
 			$('.output').append('<ul></ul>');
 		}
 		
-		val = val + 1;
-		
 		/* Append user input values to list */
 		$('.output ul').append('<li></li>');
-		$('.output ul li').last().append('<p>' + fullname + ', ' + item + '</p>');
+		$('.output ul li').last().append('<p>' + val + '.  ' + fullname + ', ' + item + '</p>');
 		
+		val = val + 1;
 		return false;
 	});
 </script>
